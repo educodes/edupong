@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 960, 50 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50, 540 )
+
+[node name="Level" type="Node2D"]
+
+[node name="ParedSuperior" type="StaticBody2D" parent="."]
+position = Vector2( 960, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedSuperior"]
+shape = SubResource( 1 )
+
+[node name="ParedInferior" type="StaticBody2D" parent="."]
+position = Vector2( 960, 1130 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedInferior"]
+shape = SubResource( 1 )
+
+[node name="ArcoPlayer" type="Area2D" parent="."]
+position = Vector2( -50, 540 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArcoPlayer"]
+shape = SubResource( 2 )
+
+[node name="ArcoPlayer2" type="Area2D" parent="."]
+position = Vector2( 1970, 540 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArcoPlayer2"]
+shape = SubResource( 2 )
